@@ -22,4 +22,7 @@ Imports:
     dplyr,
     ggplot2,
     glue,
-    magrittr
+    magrittr,
+    patchwork,
+    sf,
+    ggspatial

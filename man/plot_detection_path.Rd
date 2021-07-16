@@ -4,12 +4,18 @@
 \alias{plot_detection_path}
 \title{Plot detection paths}
 \usage{
-plot_detection_path(detection, deployment, reference_locations, lims_x, lims_y)
+plot_detection_path(
+  detection_path,
+  deployment,
+  reference_locations,
+  lims_x,
+  lims_y
+)
 }
 \arguments{
-\item{detection}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm', .}
+\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm', .}
 
-\item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'array', 'array_rkm'.}
+\item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 
 \item{reference_locations}{A tibble of reference locations containing columns 'label' and 'rkm'.}
 
@@ -24,7 +30,9 @@ An object of class 'ggplot'.
 Plot Columbia River White Sturgeon movement paths from VR2 receiver detection data.
 }
 \examples{
+\dontrun{
 lims_x = c(min(deployment$date_deployment), max(deployment$date_last_download))
 lims_y = c(0, 56)
-plot_detection_path(detection, deployment, reference_locations)
+plot_detection_path(detection, deployment, reference_locations)#'
+}
 }
