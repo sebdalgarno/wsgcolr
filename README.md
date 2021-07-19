@@ -20,6 +20,12 @@ devtools::install_github("sebdalgarno/wsgcolr")
 
 ## Example
 
+Detection data must contain at minimum:
+
+Deployment data must contain at minimum:
+
+Station data must contain at minimum:
+
 ``` r
 library(wsgcolr)
 ## basic example code 
