@@ -21,9 +21,7 @@ plot_detection_path <- function(detection_path, deployment, reference_locations,
 
   chk_detection_path(detection_path)
   chk_deployment(deployment)
-
-  chk_is(reference_locations, "tbl")
-  check_names(reference_locations, names = c("label", "rkm"))
+  chk_reference_locations(reference_locations)
 
   chk_is(lims_x, "Date")
   chk_length(lims_x, 2L)
