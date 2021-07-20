@@ -58,3 +58,15 @@ chk_river <- function(river){
   chk_is(river, "sf")
   chkor(chk_is(sf::st_geometry(river), "sfc_POLYGON"), chk_is(sf::st_geometry(river), "sfc_MULTIPOLYGON"))
 }
+
+#' Check reference locations
+#'
+#' @inheritParams params
+#' @return A flag.
+#'
+#' @export
+
+chk_reference_locations <- function(reference_locations){
+  chk_is(reference_locations, "tbl")
+  check_names(reference_locations, names = c("label", "rkm"))
+}

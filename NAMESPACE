@@ -3,6 +3,7 @@
 export(chk_deployment)
 export(chk_detection)
 export(chk_detection_path)
+export(chk_reference_locations)
 export(chk_river)
 export(chk_station)
 export(plot_deployment)
