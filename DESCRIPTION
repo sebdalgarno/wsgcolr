@@ -2,10 +2,10 @@ Package: wsgcolr
 Title: Columbia River White Sturgeon Analaysis
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Seb",
+           family = "Dalgarno",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "dalgarno@unbc.ca",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Manipulate, visualize and analyze Columbia River White Sturgeon telemetry and capture-recapture data.
 License: MIT + file LICENSE

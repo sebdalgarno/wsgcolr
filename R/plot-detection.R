@@ -14,10 +14,11 @@
 #' \dontrun{
 #' lims_x = c(min(deployment$date_deployment), max(deployment$date_last_download))
 #' lims_y = c(0, 56)
-#' plot_detection_path(detection, deployment, reference_locations)#'
+#' plot_detection_path(detection, deployment, reference_locations)
 #' }
 
-plot_detection_path <- function(detection_path, deployment, reference_locations, lims_x, lims_y){
+plot_detection_path <- function(detection_path, deployment, reference_locations,
+                                lims_x, lims_y){
 
   chk_detection_path(detection_path)
   chk_deployment(deployment)
@@ -39,7 +40,6 @@ plot_detection_path <- function(detection_path, deployment, reference_locations,
          y = lims_y) +
     geom_hline(data = reference_locations, aes(yintercept = rkm), linetype = 'dotted') +
     geom_text(data = reference_locations, aes(label = label, x = lims_x[1], y = rkm),
-              vjust = -0.5, hjust = 0.1, size = 3.5) +
+              vjust = -0.5, hjust = 0.1, size = 3.5)
 
-    theme_bw()
 }

@@ -7,7 +7,7 @@
 chk_detection_path(detection_path)
 }
 \arguments{
-\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm', .}
+\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 }
 \value{
 A flag.

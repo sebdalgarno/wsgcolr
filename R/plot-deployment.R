@@ -57,7 +57,6 @@ plot_deployment <- function(deployment, detection = NULL){
     geom_point(aes(x = date_deployment, y = station), pch = '|', lwd = 2) +
     geom_point(aes(x = date_last_download, y = station), pch = '|', lwd = 2) +
     labs(x = "Date", y = "Station", color = "Array") +
-    theme(legend.position = "right") +
     NULL
 
   if(!is.null(detection)){
@@ -86,8 +85,10 @@ plot_deployment <- function(deployment, detection = NULL){
 
 plot_receiver_coverage <- function(station, river, deployment, detection = NULL){
 
-  gp_deployment <- plot_deployment(deployment, detection)
-  gp_station <- plot_station(station, river)
+  gp_deployment <- plot_deployment(deployment = deployment,
+                                   detection = detection)
+  gp_station <- plot_station(station = station,
+                             river = river)
 
   patchwork::wrap_plots(gp_deployment, gp_station)
 

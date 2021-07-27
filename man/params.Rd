@@ -4,7 +4,7 @@
 \alias{params}
 \title{Parameter Descriptions for wsgcolr functions}
 \arguments{
-\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm', .}
+\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
 \item{detection}{A tibble of detection data containing columns 'transmitter_id', 'timestep', 'station'. If \code{NULL}, argument is ignored.}
 

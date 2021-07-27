@@ -6,8 +6,8 @@
 #' @export
 
 chk_detection_path <- function(detection_path){
-  chk_is(detection, "tbl")
-  check_names(detection ,names =  c("transmitter_id", "timestep", "path", "array", "array_rkm"))
+  chk_is(detection_path, "tbl")
+  check_names(detection_path ,names =  c("transmitter_id", "timestep", "path", "array", "array_rkm"))
 }
 
 #' Check detection data

@@ -13,7 +13,7 @@ plot_detection_path(
 )
 }
 \arguments{
-\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm', .}
+\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
 \item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 
@@ -33,6 +33,6 @@ Plot Columbia River White Sturgeon movement paths from VR2 receiver detection da
 \dontrun{
 lims_x = c(min(deployment$date_deployment), max(deployment$date_last_download))
 lims_y = c(0, 56)
-plot_detection_path(detection, deployment, reference_locations)#'
+plot_detection_path(detection, deployment, reference_locations)
 }
 }
