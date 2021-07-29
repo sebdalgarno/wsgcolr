@@ -13,7 +13,7 @@ detection_timestep <- function(detection, timestep = "day", receiver_group = "ar
   chk_string(receiver_group)
 
   detection %>%
-    mutate(timestep = as.Date(floor_date(datetime_utc, unit = timestep))) %>%
+    mutate(timestep = as.Date(dttr2::dtt_floor(datetime_utc, units = timestep))) %>%
     group_by(transmitter_id, timestep, !! sym(receiver_group)) %>%
     tally() %>%
     ungroup() %>%
