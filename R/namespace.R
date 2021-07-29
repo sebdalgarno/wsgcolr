@@ -1,2 +1,2 @@
-#' @import ggplot2 chk dttr2 magrittr glue dplyr
+#' @import ggplot2 chk magrittr glue dplyr
 NULL
