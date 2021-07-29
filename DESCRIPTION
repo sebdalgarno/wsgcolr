@@ -25,4 +25,5 @@ Imports:
     magrittr,
     patchwork,
     sf,
-    ggspatial
+    ggspatial,
+    tidyr

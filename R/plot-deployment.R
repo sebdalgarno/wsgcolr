@@ -9,10 +9,10 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' plot_station(station, river)
+#' plot_deployment_spatial(station, river)
 #' }
 
-plot_station <- function(station, river){
+plot_deployment_spatial <- function(station, river){
 
   chk_station(station)
   chk_river(river)
@@ -44,12 +44,14 @@ plot_station <- function(station, river){
 #' @export
 #' @examples
 #' \dontrun{
-#' plot_deployment(deployment)
+#' plot_deployment_temporal(deployment)
 #' }
 
-plot_deployment <- function(deployment, detection = NULL){
+plot_deployment_temporal <- function(deployment, detection = NULL){
 
   chk_deployment(deployment)
+  chkor(chk_null(detection), chk_detection(detection))
+
   gp <-  ggplot(data = deployment) +
     geom_segment(aes(x = date_deployment, y = station,
                      xend = date_last_download, yend = station, color = array),
@@ -60,7 +62,6 @@ plot_deployment <- function(deployment, detection = NULL){
     NULL
 
   if(!is.null(detection)){
-    chk_detection(detection)
     gp <- gp + geom_point(data = detection, aes(x = timestep, y = station),
                           color = "black", size = 1)
 
@@ -80,16 +81,16 @@ plot_deployment <- function(deployment, detection = NULL){
 #' @examples
 #'
 #' \dontrun{
-#' plot_receiver_coverage(station, river, deployment)
+#' plot_deployment(station, river, deployment)
 #' }
 
-plot_receiver_coverage <- function(station, river, deployment, detection = NULL){
+plot_deployment <- function(station, river, deployment, detection = NULL){
 
-  gp_deployment <- plot_deployment(deployment = deployment,
+  gp_temp <- plot_deployment_temporal(deployment = deployment,
                                    detection = detection)
-  gp_station <- plot_station(station = station,
+  gp_spat <- plot_deployment_spatial(station = station,
                              river = river)
 
-  patchwork::wrap_plots(gp_deployment, gp_station)
+  patchwork::wrap_plots(gp_temp, gp_spat)
 
 }

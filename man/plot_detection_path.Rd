@@ -5,19 +5,25 @@
 \title{Plot detection paths}
 \usage{
 plot_detection_path(
-  detection_path,
+  detection_event,
   deployment,
-  reference_locations,
+  reference_rkm,
+  receiver_group,
+  receiver_group_rkm,
   lims_x,
   lims_y
 )
 }
 \arguments{
-\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
+\item{detection_event}{A tibble of detection path data returned from \code{detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
 \item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 
-\item{reference_locations}{A tibble of reference locations containing columns 'label' and 'rkm'.}
+\item{reference_rkm}{A tibble of reference rkm locations containing columns 'label' and 'rkm'.}
+
+\item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
+
+\item{receiver_group_rkm}{A character string of the column containing receiver group rkm.}
 
 \item{lims_x}{A vector of class 'Date' containing x-axis limits.}
 
@@ -33,6 +39,6 @@ Plot Columbia River White Sturgeon movement paths from VR2 receiver detection da
 \dontrun{
 lims_x = c(min(deployment$date_deployment), max(deployment$date_last_download))
 lims_y = c(0, 56)
-plot_detection_path(detection, deployment, reference_locations)
+plot_detection_path(detection, deployment, reference_rkm)
 }
 }

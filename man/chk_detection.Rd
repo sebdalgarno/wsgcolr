@@ -7,7 +7,7 @@
 chk_detection(detection)
 }
 \arguments{
-\item{detection}{A tibble of detection data containing columns 'transmitter_id', 'timestep', 'station'. If \code{NULL}, argument is ignored.}
+\item{detection}{A tibble of raw detection data containing columns 'transmitter_id' and 'datetime_utc'.}
 }
 \value{
 A flag.

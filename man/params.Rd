@@ -4,9 +4,27 @@
 \alias{params}
 \title{Parameter Descriptions for wsgcolr functions}
 \arguments{
-\item{detection_path}{A tibble of detection path data containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
+\item{detection_event}{A tibble of detection path data returned from \code{detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
-\item{detection}{A tibble of detection data containing columns 'transmitter_id', 'timestep', 'station'. If \code{NULL}, argument is ignored.}
+\item{detection_timestep}{A tibble of aggregated detection data returned from \code{detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
+
+\item{detection_complete}{A tibble of complete detection data returned from \code{detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
+
+\item{detection_ratio}{A tibble of detection rtio data returned from \code{detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
+
+\item{detection}{A tibble of raw detection data containing columns 'transmitter_id' and 'datetime_utc'.}
+
+\item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
+
+\item{receiver_group_rkm}{A character string of the column containing receiver group rkm.}
+
+\item{reference_rkm}{A tibble of reference rkm locations containing columns 'label' and 'rkm'.}
+
+\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{lubridate::floor_date}: second, minute, hour, day, week, month, bimonth, quarter, season, halfyear and year.}
+
+\item{max_absence}{A number of the maximum hours without detection for new event to occur.}
+
+\item{squash}{A flag indicating whether to reduce detection events to first and last timesteps.}
 
 \item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 

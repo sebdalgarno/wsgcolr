@@ -2,24 +2,28 @@
 % Please edit documentation in R/plot-deployment.R
 \name{plot_deployment}
 \alias{plot_deployment}
-\title{Plot deployment}
+\title{Plot receiver coverage}
 \usage{
-plot_deployment(deployment, detection = NULL)
+plot_deployment(station, river, deployment, detection = NULL)
 }
 \arguments{
+\item{station}{A sf object of the station point locations containing column 'array' (for color coding). Geometry column must inherit class 'sfc_POINT' or 'sfc_MULTIPOINT'.}
+
+\item{river}{A sf object of the river polygon. Geometry column must inherit class 'sfc_POLYGON' or 'sfc_MULTIPOLYGON'.}
+
 \item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 
-\item{detection}{A tibble of detection data containing columns 'transmitter_id', 'timestep', 'station'. If \code{NULL}, argument is ignored.}
+\item{detection}{A tibble of raw detection data containing columns 'transmitter_id' and 'datetime_utc'.}
 }
 \value{
 An object of class 'ggplot'.
 }
 \description{
-Plot receiver deployments over time.
-Optionally provide detection data to visualize detections overlapping deployment periods.
+Plot combination of station map and receiver deployment over time.
 }
 \examples{
+
 \dontrun{
-plot_deployment(deployment)
+plot_deployment(station, river, deployment)
 }
 }
