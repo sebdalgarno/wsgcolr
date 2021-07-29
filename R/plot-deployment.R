@@ -62,7 +62,7 @@ plot_deployment_temporal <- function(deployment, detection = NULL){
     NULL
 
   if(!is.null(detection)){
-    gp <- gp + geom_point(data = detection, aes(x = timestep, y = station),
+    gp <- gp + geom_point(data = detection, aes(x = datetime_utc, y = station),
                           color = "black", size = 1)
 
   }
