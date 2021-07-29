@@ -1,2 +1,3 @@
-#' @import ggplot2 chk magrittr glue dplyr
+#' @import ggplot2 chk magrittr dplyr
+#' @importFrom glue glue
 NULL
