@@ -9,7 +9,7 @@ detection_timestep(detection, timestep = "day", receiver_group = "array")
 \arguments{
 \item{detection}{A tibble of raw detection data containing columns 'transmitter_id' and 'datetime_utc'.}
 
-\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{lubridate::floor_date}: second, minute, hour, day, week, month, bimonth, quarter, season, halfyear and year.}
+\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{dttr2::dtt_floor}: 'days', 'hours', 'minutes', 'months', 'seconds' or 'years'.}
 
 \item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
 }

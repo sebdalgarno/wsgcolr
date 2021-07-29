@@ -4,7 +4,7 @@ chk_dat <- function(x, names){
 }
 
 chk_timestep <- function(x){
-  chk_subset(x, c("second", "minute", "hour", "day", "week", "month", "bimonth", "quarter", "season", "halfyear", "year"))
+  chk_subset(x, c('days', 'hours', 'minutes', 'months', 'seconds', 'years'))
 }
 
 #' Check detection path data

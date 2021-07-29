@@ -13,7 +13,7 @@ detection_complete(
 \arguments{
 \item{detection_timestep}{A tibble of aggregated detection data returned from \code{detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
 
-\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{lubridate::floor_date}: second, minute, hour, day, week, month, bimonth, quarter, season, halfyear and year.}
+\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{dttr2::dtt_floor}: 'days', 'hours', 'minutes', 'months', 'seconds' or 'years'.}
 
 \item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
 }

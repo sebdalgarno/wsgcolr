@@ -20,7 +20,7 @@
 
 \item{reference_rkm}{A tibble of reference rkm locations containing columns 'label' and 'rkm'.}
 
-\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{lubridate::floor_date}: second, minute, hour, day, week, month, bimonth, quarter, season, halfyear and year.}
+\item{timestep}{A character string of the timestep. Acceptable values are those accepted by \code{dttr2::dtt_floor}: 'days', 'hours', 'minutes', 'months', 'seconds' or 'years'.}
 
 \item{max_absence}{A number of the maximum hours without detection for new event to occur.}
 

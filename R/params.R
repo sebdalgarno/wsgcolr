@@ -8,7 +8,7 @@
 #' @param receiver_group A character string of the column containing receiver group (e.g., station, zone, array).
 #' @param receiver_group_rkm A character string of the column containing receiver group rkm.
 #' @param reference_rkm A tibble of reference rkm locations containing columns 'label' and 'rkm'.
-#' @param timestep A character string of the timestep. Acceptable values are those accepted by `lubridate::floor_date`: second, minute, hour, day, week, month, bimonth, quarter, season, halfyear and year.
+#' @param timestep A character string of the timestep. Acceptable values are those accepted by `dttr2::dtt_floor`: 'days', 'hours', 'minutes', 'months', 'seconds' or 'years'.
 #' @param max_absence A number of the maximum hours without detection for new event to occur.
 #' @param squash A flag indicating whether to reduce detection events to first and last timesteps.
 #' @param deployment A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.
