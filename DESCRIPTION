@@ -18,7 +18,6 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     chk,
-    dttr2,
     dplyr,
     ggplot2,
     glue,
