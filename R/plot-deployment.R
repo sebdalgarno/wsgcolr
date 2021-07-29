@@ -50,19 +50,19 @@ plot_deployment_spatial <- function(station, river){
 plot_deployment_temporal <- function(deployment, detection = NULL){
 
   chk_deployment(deployment)
-  chkor(chk_null(detection), chk_detection(detection))
+  chkor(chk_null(detection), chk_detection_timestep(detection))
 
   gp <-  ggplot(data = deployment) +
-    geom_segment(aes(x = date_deployment, y = station,
-                     xend = date_last_download, yend = station, color = array),
+    geom_segment(aes(x = date_deployment, y = station_id,
+                     xend = date_last_download, yend = station_id, color = array),
                  alpha = 1, size = 3.8) +
-    geom_point(aes(x = date_deployment, y = station), pch = '|', lwd = 2) +
-    geom_point(aes(x = date_last_download, y = station), pch = '|', lwd = 2) +
+    geom_point(aes(x = date_deployment, y = station_id), pch = '|', lwd = 2) +
+    geom_point(aes(x = date_last_download, y = station_id), pch = '|', lwd = 2) +
     labs(x = "Date", y = "Station", color = "Array") +
     NULL
 
   if(!is.null(detection)){
-    gp <- gp + geom_point(data = detection, aes(x = datetime_utc, y = station),
+    gp <- gp + geom_point(data = detection, aes(x = timestep, y = station_id),
                           color = "black", size = 1)
 
   }

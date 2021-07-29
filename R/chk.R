@@ -3,6 +3,13 @@ chk_dat <- function(x, names){
   check_names(x ,names = names)
 }
 
+#' Check timestep arg
+#'
+#' @inheritParams params
+#' @return A flag.
+#'
+#' @export
+#'
 chk_timestep <- function(timestep){
   chk_subset(timestep, c("second", "minute", "hour", "day", "week", "month", "bimonth", "quarter", "season", "halfyear", "year"))
 }
