@@ -4,13 +4,13 @@
 \alias{params}
 \title{Parameter Descriptions for wsgcolr functions}
 \arguments{
-\item{detection_event}{A tibble of detection path data returned from \code{detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
+\item{detection_event}{A tibble of detection path data returned from \code{wsgcolr::detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
-\item{detection_timestep}{A tibble of aggregated detection data returned from \code{detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
+\item{detection_timestep}{A tibble of aggregated detection data returned from \code{wsgcolr::detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
 
-\item{detection_complete}{A tibble of complete detection data returned from \code{detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
+\item{detection_complete}{A tibble of complete detection data returned from \code{wsgcolr::detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
 
-\item{detection_ratio}{A tibble of detection rtio data returned from \code{detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
+\item{detection_ratio}{A tibble of detection rtio data returned from \code{wsgcolr::detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
 
 \item{detection}{A tibble of raw detection data containing columns 'transmitter_id' and 'datetime_utc'.}
 

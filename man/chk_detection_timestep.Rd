@@ -7,7 +7,7 @@
 chk_detection_timestep(detection_timestep)
 }
 \arguments{
-\item{detection_timestep}{A tibble of aggregated detection data returned from \code{detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
+\item{detection_timestep}{A tibble of aggregated detection data returned from \code{wsgcolr::detection_timestep()} containing columns 'transmitter_id' and 'timestep'. If \code{NULL}, argument is ignored.}
 }
 \value{
 A flag.

@@ -7,7 +7,7 @@
 chk_detection_event(detection_event)
 }
 \arguments{
-\item{detection_event}{A tibble of detection path data returned from \code{detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
+\item{detection_event}{A tibble of detection path data returned from \code{wsgcolr::detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 }
 \value{
 A flag.

@@ -7,7 +7,7 @@
 plot_detection_ratio_absolute(detection_ratio, receiver_group = "array")
 }
 \arguments{
-\item{detection_ratio}{A tibble of detection rtio data returned from \code{detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
+\item{detection_ratio}{A tibble of detection rtio data returned from \code{wsgcolr::detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
 
 \item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
 }

@@ -7,7 +7,7 @@
 chk_detection_complete(detection_complete)
 }
 \arguments{
-\item{detection_complete}{A tibble of complete detection data returned from \code{detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
+\item{detection_complete}{A tibble of complete detection data returned from \code{wsgcolr::detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
 }
 \value{
 A flag.

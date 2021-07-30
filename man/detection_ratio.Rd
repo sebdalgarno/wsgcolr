@@ -7,7 +7,7 @@
 detection_ratio(detection_complete, receiver_group = "array")
 }
 \arguments{
-\item{detection_complete}{A tibble of complete detection data returned from \code{detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
+\item{detection_complete}{A tibble of complete detection data returned from \code{wsgcolr::detection_complete()} containing columns 'transmitter_id' and 'timestep'.}
 
 \item{receiver_group}{A character string of the column containing receiver group (e.g., station, zone, array).}
 }

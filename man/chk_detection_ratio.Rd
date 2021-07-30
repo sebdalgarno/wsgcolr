@@ -7,7 +7,7 @@
 chk_detection_ratio(detection_ratio)
 }
 \arguments{
-\item{detection_ratio}{A tibble of detection rtio data returned from \code{detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
+\item{detection_ratio}{A tibble of detection rtio data returned from \code{wsgcolr::detection_ratio()} containing columns 'timestep', 'n' and 'prop'.}
 }
 \value{
 A flag.

@@ -15,7 +15,7 @@ plot_detection_path(
 )
 }
 \arguments{
-\item{detection_event}{A tibble of detection path data returned from \code{detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
+\item{detection_event}{A tibble of detection path data returned from \code{wsgcolr::detection_event()}containing columns 'transmitter_id', 'timestep', 'path', 'array', 'array_rkm'.}
 
 \item{deployment}{A tibble of the receiver deployments containing columns 'date_deployment', 'date_last_download', 'station', 'array', 'array_rkm'.}
 
